@@ -1,9 +1,3 @@
-# import random
-
-# print(random.randrange(1, 10))
-
-# ----------------------------------------
-
 # a = '''Lorem ipsum dolor sit amet,
 # consectetur adipiscing elit,
 # sed do eiusmod tempor incididunt

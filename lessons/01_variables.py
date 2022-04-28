@@ -97,3 +97,9 @@
 
 # foo()
 # print(x)
+
+# ----------------------------------------
+
+# import random
+
+# print(random.randrange(1, 10))
