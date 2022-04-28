@@ -97,3 +97,68 @@
 
 # print(['fizz' + str(x) if x % 3 == 0 else 'buzz' + str(x) for x in range(10) if x %
 #       3 == 0 or x % 5 == 0])
+
+# ----------------------------------------
+
+# fruits = ['apple', 'banana', 'cherry', 'kiwi', 'mango']
+
+# fruits.sort()
+# print(fruits)
+
+# fruits.sort(reverse=True)
+# print(fruits)
+
+# numbers = [100, 50, 65, 82, 23]
+
+# numbers.sort()
+# print(numbers)
+
+# numbers.sort(reverse=True)
+# print(numbers)
+
+# ----------------------------------------
+
+# fruits = ['apple', 'Banana', 'cherry', 'kiwi', 'mango']
+
+# fruits.sort()
+# print(fruits)
+
+# fruits.sort(key=str.lower)
+# print(fruits)
+
+
+# def foo(n):
+#     return n.lower()
+
+
+# fruits.sort(key=foo)
+# print(fruits)
+
+# fruits.reverse()
+# print(fruits)
+
+# ----------------------------------------
+
+# a = [2, 3, 1]
+# b = a
+
+# a.sort()
+# print(b)
+
+# c = [2, 3, 1]
+# d = c.copy()
+
+# c.sort()
+# print(d)
+
+# ----------------------------------------
+
+# list_one = [1, 2, 3]
+# list_two = [7, 8, 9]
+
+# print(list_one + list_two)
+
+# list_one.extend(list_two)
+# print(list_one)
+
+# ----------------------------------------
