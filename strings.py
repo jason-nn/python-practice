@@ -56,4 +56,4 @@
 
 # ----------------------------------------
 
-print('We are the so-called \'Vikings\' from the north.')
+# print('We are the so-called \'Vikings\' from the north.')
