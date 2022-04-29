@@ -24,6 +24,6 @@ class Student(Person):
         return super().greeting() + ' from {}'.format(self.school)
 
 
-nezuko = Student('Zenitsu', 'Agatsuma', 'Kimetsu Academy')
-print(nezuko.name())
-print(nezuko.greeting())
+zenitsu = Student('Zenitsu', 'Agatsuma', 'Kimetsu Academy')
+print(zenitsu.name())
+print(zenitsu.greeting())
