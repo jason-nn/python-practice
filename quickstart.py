@@ -1,4 +1,5 @@
-from flask import Flask
+import json
+from flask import Flask, jsonify
 from markupsafe import escape
 
 app = Flask(__name__)
@@ -31,7 +32,7 @@ def show_subpath(subpath):
 
 @app.route('/json')
 def show_json():
-    return {
+    return jsonify({
         'first_name': 'Tanjiro',
         'last_name': 'Kamado',
-    }
+    })
