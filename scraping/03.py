@@ -15,6 +15,7 @@ form.select("input")[1]["value"] = "ThunderDude"
 profiles_page = browser.submit(form, login_page.url)
 
 print(profiles_page.soup)
+print(profiles_page.soup.title)
 
 links = profiles_page.soup.select("a")
 
