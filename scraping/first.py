@@ -6,7 +6,7 @@ import re
 url = "http://olympus.realpython.org/profiles/dionysus"
 
 
-def extract_html_from_url(url):
+def get_html_from_url(url):
     page = urlopen(url)
     html_bytes = page.read()
     html = html_bytes.decode('utf-8')
@@ -34,7 +34,7 @@ def get_from_html_with_label(html, label):
     return raw_value
 
 
-html = extract_html_from_url(url=url)
+html = get_html_from_url(url=url)
 print(html)
 
 title = get_title_from_html(html=html)
