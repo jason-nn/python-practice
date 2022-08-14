@@ -14,11 +14,7 @@ def get_main_headquarters(headquarter):
 def get_headquarters_list_from_url(url):
     page = browser.get(url)
     headquarters = page.soup.find_all('td', {'class': 'headquarters'})
-    return filter(lambda x: len(x) > 0, [get_main_headquarters(headquarter.text) for headquarter in headquarters])
-
-
-def sort_grouped_headquarters(grouped_headquarters):
-    return sorted(grouped_headquarters.items(), key=lambda x: x[1], reverse=True)
+    return list(filter(lambda x: len(x) > 0, [get_main_headquarters(headquarter.text) for headquarter in headquarters]))
 
 
 def get_grouped_headquarters_from_list(list):
@@ -28,12 +24,18 @@ def get_grouped_headquarters_from_list(list):
             output[headquarter] += 1
         else:
             output[headquarter] = 1
-    return sort_grouped_headquarters(output)
+    return output
+
+
+def sort_grouped_headquarters(grouped_headquarters):
+    return sorted(grouped_headquarters.items(), key=lambda x: x[1], reverse=True)
 
 
 def get_headquarters_from_url(url):
     headquarters_list = get_headquarters_list_from_url(url)
-    return get_grouped_headquarters_from_list(headquarters_list)
+    grouped_headquarters = get_grouped_headquarters_from_list(
+        headquarters_list)
+    return sort_grouped_headquarters(grouped_headquarters)
 
 
 private_companies_headquarters = get_headquarters_from_url(
