@@ -39,10 +39,12 @@ public_companies_headquarters = get_headquarters_from_url(
     public_companies_url)
 
 
-print('PRIVATE COMPANIES HEADQUARTERS')
-print(private_companies_headquarters)
+print('PRIVATE COMPANIES MAIN HEADQUARTERS')
+for headquarters, count in private_companies_headquarters.items():
+    print(f'{headquarters}: {count}')
 
 print()
 
-print('PUBLIC COMPANIES HEADQUARTERS')
-print(public_companies_headquarters)
+print('PUBLIC COMPANIES MAIN HEADQUARTERS')
+for headquarters, count in public_companies_headquarters.items():
+    print(f'{headquarters}: {count}')
