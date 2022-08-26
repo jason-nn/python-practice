@@ -13,16 +13,15 @@ def get_main_headquarters(headquarter):
 def get_headquarters_list_from_url(url):
     page = browser.get(url)
     headquarters = page.soup.find_all('td', {'class': 'headquarters'})
-    return list(filter(lambda x: len(x) > 0, [get_main_headquarters(headquarter.text) for headquarter in headquarters]))
+    main_headquarters = [get_main_headquarters(
+        headquarter.text) for headquarter in headquarters]
+    return [main_headquarter for main_headquarter in main_headquarters if len(main_headquarter) > 0]
 
 
 def get_grouped_headquarters_from_list(list):
     output = {}
     for headquarter in list:
-        if headquarter in output.keys():
-            output[headquarter] += 1
-        else:
-            output[headquarter] = 1
+        output[headquarter] = output.get(headquarter, 0)+1
     return output
 
 
